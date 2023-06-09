@@ -185,7 +185,7 @@
         <?php if (theme_get_setting('breadcrumbs')): ?><?php if ($breadcrumb): ?><div id="breadcrumbs"><?php print $breadcrumb; ?></div><?php endif;?><?php endif; ?>
         <?php print $messages; ?>
         <?php if ($page['content_top']): ?><div id="content_top"><?php print render($page['content_top']); ?></div><?php endif; ?>
-        <div id="content-wrap">
+        <div class="pagina-curso" id="content-wrap">
           <?php print render($title_prefix); ?>
 		  <?php 
 			if ($title) {

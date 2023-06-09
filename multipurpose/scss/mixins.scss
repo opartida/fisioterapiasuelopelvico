@@ -423,3 +423,73 @@
     text-decoration: none;
   }
 }
+
+@mixin webform() {
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  textarea {
+    overflow: auto;
+  }
+  .form-checkbox {
+    width: auto;
+  }
+  .webform-component--nombre {
+    margin-top: 30px;
+  }
+  input[type="submit"] {
+    border-radius: 5px;
+    border: 0;
+    color: #ff8000;
+    height: 45px;
+    font-size: 16px;
+    background: #f4f4f4;
+    background: -moz-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(1%, #f4f4f4),
+      color-stop(100%, #ededed)
+    );
+    background: -webkit-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    background: -o-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    background: -ms-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    background: linear-gradient(to bottom, #f4f4f4 1%, #ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ededed', GradientType=0);
+  }
+  input[type="submit"]:hover {
+    background-color: #ff8000;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+@mixin row-preguntas-frecuentes($backcolor, $textcolor) {
+  background: $backcolor;
+  padding: 10px;
+  color: #fff;
+  position: relative;
+  /* width: 200px; */
+  text-align: left;
+  line-height: 40px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 100%;
+    top: 0;
+    border: 30px solid transparent;
+    border-left: 20px solid $backcolor;
+  }
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+  .views-field-title a {
+    color: $textcolor;
+    text-decoration: none;
+  }
+}
