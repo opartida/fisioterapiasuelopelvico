@@ -1,0 +1,13 @@
+name = EU Cookie Compliance Extras
+description = Provides extra features for the EU Cookie Compliance module.
+core = 7.x
+configure = admin/config/system/eu-cookie-compliance/extras
+dependencies[] = ctools
+dependencies[] = eu_cookie_compliance (>7.x-1.24)
+dependencies[] = jquery_update
+
+; Information added by Drupal.org packaging script on 2020-09-25
+version = "7.x-1.34"
+core = "7.x"
+project = "euccx"
+datestamp = "1601027989"

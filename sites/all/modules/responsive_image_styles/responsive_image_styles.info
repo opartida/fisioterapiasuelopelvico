@@ -1,0 +1,14 @@
+name = responsive image styles
+description = "provide adaptive images via drupal image styles"
+package = Media
+core = 7.x
+dependencies[] = system (>7.10)
+dependencies[] = image
+dependencies[] = focal_point
+
+; Information added by Drupal.org packaging script on 2017-03-22
+version = "7.x-1.2"
+core = "7.x"
+project = "responsive_image_styles"
+datestamp = "1490200161"
+

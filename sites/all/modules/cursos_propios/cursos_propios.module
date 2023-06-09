@@ -1,0 +1,46 @@
+<?php
+function cursos_propios_webform_select_options_info() { 
+$items = array();
+
+if (function_exists('_cursos_propios_get_curso_nodes')) {
+    $items['cursos'] = array(
+    'title' => t('Cursos'),
+    'options callback' => '_cursos_propios_get_curso_nodes',
+  );
+}
+
+if (module_exists('views')) {
+    $items['views'] = array(
+        'title' => t('A view cursos'),
+        'options callback' => '_cursos_propios_get_view_options',
+    );
+}
+
+return $items;
+}
+
+function _cursos_propios_get_curso_nodes() { 
+	$nodes = array();
+
+	$select = db_query(db_rewrite_sql("SELECT nid, title FROM 
+			  {node} WHERE type = 'curso' ORDER BY title AND completo=1"));
+			  
+			  
+	while ($node = db_fetch_object($select)) {
+		$nodes[$node->nid] = $node->title;
+	}
+	return $nodes;
+}
+
+function _cursos_propios_get_view_options() { 
+	// Change 'my_sample_view' to the machine name of your View. 
+	$view = views_get_view('cursos_no_completos_formulario', true); 
+	$view->execute(); 
+	$items = array();
+
+	foreach ($view->result as $item) {
+	  $full_node = node_load($item->nid);
+	  $items[$item->nid] = $full_node->title;
+	}
+	return $items;
+}

@@ -1,0 +1,190 @@
+/*===============
+CONTAINER
+===============*/
+.cookie-tab-container {
+  border: 3px solid #efefef;
+  padding: 12px;
+}
+#cookie-tabs {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  font-family: sans-serif;
+  padding: 0.1em;
+  border: 2px solid #efefef;
+  border-radius: 0;
+}
+#cookie-tabs > ul {
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 25%;
+  background-image: none;
+  background-color: white;
+  padding: 0;
+  border: none;
+}
+#cookie-tabs > ul > li {
+  display: block;
+  background-image: none;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+#cookie-tabs > ul > li a {
+  display: block;
+  float: left;
+  width: 90%;
+  padding: 5%;
+}
+#cookie-tabs ul li.ui-tabs-selected a {
+  background-color: #efefef;
+  color: #2196f3;
+}
+#cookie-tabs ul li.ui-tabs-selected a:after {
+  content: "\00BB";
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  color: #2196f3;
+}
+#cookie-tabs > div {
+  width: 70%;
+  padding: 0 12px;
+}
+#cookie-tabs > div h2,
+#cookie-tabs > div h3 {
+  font-size: 20px;
+  font-weight: 900;
+  padding: 0 0 0.2em;
+  margin: 0;
+}
+#cookie-tabs > div .content {
+  margin: 0;
+}
+#cookie-tabs > div h2 a {
+  cursor: auto;
+  text-decoration: none;
+  color: #222;
+}
+/*===============
+TOGGLE BUTTON
+===============*/
+.euccx-switch-wrapper {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.euccx-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.euccx-input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.euccx-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.euccx-slider:before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .euccx-slider {
+  background-color: #2196f3;
+}
+input:focus + .euccx-slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+.euccx-slider.euccx-slider-required-cookies:before,
+input:checked + .euccx-slider:before,
+.euccx-slider.euccx-slider-checked:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.euccx-slider.euccx-slider-required-cookies,
+.euccx-slider.euccx-slider-checked {
+  background-color: #c2e2fc;
+}
+/*===============
+SAVE BUTTON
+===============*/
+.cookie-tab-container .cookie-tab-actions {
+  margin: 12px auto;
+  width: 100%;
+  text-align: center;
+}
+button.cookie-settings-save {
+  color: white;
+  background: #4c8ffb;
+  border: 1px #3079ed solid;
+  box-shadow: inset 0 1px 0 #80b0fb;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 12pt;
+  outline: none;
+}
+button.cookie-settings-save:hover {
+  color: #efefef;
+  border: 1px #2f5bb7 solid;
+  box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #5a94f1;
+  background: #3f83f1;
+}
+button.cookie-settings-save:active {
+  box-shadow: inset 0 2px 5px #2370fe;
+}
+/*===============
+RESPONSIVE RULES
+===============*/
+@media (max-width: 768px) {
+  .cookie-tab-container {
+    border: none;
+    padding: 0;
+  }
+  #cookie-tabs {
+    display: block;
+  }
+  #cookie-tabs > ul {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+  }
+  #cookie-tabs > div {
+    width: 100%;
+    padding: 0;
+    float: left;
+    position: relative;
+  }
+  #cookie-tabs > ul > li {
+    width: 100%;
+  }
+}
