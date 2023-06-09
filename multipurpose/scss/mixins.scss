@@ -10,8 +10,8 @@
 //    `:before` to contain the top-margins of child elements.
 @mixin clearfix {
   &:before,
-    &:after {
-    content: ' '; // 1
+  &:after {
+    content: " "; // 1
     display: table; // 2
   }
 
@@ -21,10 +21,12 @@
 }
 
 @mixin panel-variant($color1, $color2, $fontcolor) {
-	a,ul,li {
-		color:$fontcolor;
-	}
-	@include linear-gradient($color1,$color2);
+  a,
+  ul,
+  li {
+    color: $fontcolor;
+  }
+  @include linear-gradient($color1, $color2);
 }
 
 @mixin vendor-prefix($name, $argument) {
@@ -42,14 +44,12 @@
 
 @mixin font-face($name, $svg-name, $filepath, $weight: normal, $style: normal) {
   @font-face {
-    font-family: '#{$name}';
+    font-family: "#{$name}";
     font-style: $style;
     font-weight: $weight;
-    src: url('#{$filepath}.eot');
-    src: url('#{$filepath}.eot?#iefix') format('embedded-opentype'),
-         url('#{$filepath}.woff') format('woff'),
-         url('#{$filepath}.ttf') format('truetype'),
-         url('#{$filepath}.svg##{$svg-name}') format('svg');
+    src: url("#{$filepath}.eot");
+    src: url("#{$filepath}.eot?#iefix") format("embedded-opentype"), url("#{$filepath}.woff") format("woff"),
+      url("#{$filepath}.ttf") format("truetype"), url("#{$filepath}.svg##{$svg-name}") format("svg");
   }
 }
 
@@ -61,7 +61,9 @@
   background: -o-linear-gradient(top, $color1, $color2);
   background: -ms-linear-gradient(top, $color1, $color2);
   background: linear-gradient(top, $color1, $color2);
-  filter: unquote('progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=0)');
+  filter: unquote(
+    "progid:DXImageTransform.Microsoft.gradient(startColorstr=" #{$color1}", endColorstr=" #{$color2}",GradientType=0)"
+  );
 }
 
 @mixin headline-variant($size) {
@@ -69,14 +71,15 @@
   margin-top: $heading-margin-top - capline-pixels($size);
   padding-bottom: $heading-margin-bottom - baseline-pixels($size);
 
-  &.underline, &.cluster {
+  &.underline,
+  &.cluster {
     margin-top: 55px - capline-pixels($size);
   }
 }
 
 @mixin price-variant($size) {
   font-size: $size;
-  $font-size-cent: ceil($size*$price-cent-factor);
+  $font-size-cent: ceil($size * $price-cent-factor);
 
   > sup {
     font-size: $font-size-cent;
@@ -103,7 +106,7 @@
         &.#{$variant} > td,
         > th.#{$variant},
         > td.#{$variant} {
-          @if $variant == 'brand' or $variant == 'inactive' {
+          @if $variant == "brand" or $variant == "inactive" {
             background: $color-background;
           } @else {
             background: fallback-rgba($color-background, $table-bgr-color-alpha, $theme-background-color);
@@ -114,7 +117,7 @@
     }
   }
 
-  @if $variant != 'inactive' {
+  @if $variant != "inactive" {
     .table-hover {
       > tbody > tr:hover {
         &.#{$variant} > th,
@@ -122,7 +125,7 @@
         > th.#{$variant},
         > td.#{$variant} {
           color: hsv-darken($color, 7%, true);
-          @if $variant == 'brand' {
+          @if $variant == "brand" {
             background-color: hsv-darken($color-background, 7%, true);
           } @else {
             background-color: fallback-rgba($color-background, $table-bgr-color-hover-alpha, $theme-background-color);
@@ -135,7 +138,7 @@
 
 @mixin table-striped-variant($color-odd, $color-odd-bg) {
   > tbody > tr:nth-child(odd),
-    > tbody > tr.odd {
+  > tbody > tr.odd {
     > th,
     > td {
       background-color: $color-odd-bg;
@@ -209,8 +212,8 @@
     &,
     &.focus,
     &:focus,
-      &.hover,
-      &:hover {
+    &.hover,
+    &:hover {
       color: hsv-lighten($font-color-regular, 50%, true);
       background: hsv-lighten($color-element-background, 5%, true);
       border-color: hsv-lighten($color-element-border, 14%, true);
@@ -228,46 +231,53 @@
   -khtml-opacity: $value;
   opacity: $value;
   $opacity-ie: ($opacity * 100);
-  -ms-filter: unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity-ie})');
-  filter: unquote('alpha(opacity=#{$opacity-ie})');
+  -ms-filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity-ie})");
+  filter: unquote("alpha(opacity=#{$opacity-ie})");
 }
 
 @mixin input-decoration-variant($background-color, $border-color, $theme-background-color) {
-
   $calculated-border-color: hsv-darken($border-color, 15%, true);
 
   .form-input {
-    background-color: fallback-rgba($background-color, .05, $theme-background-color);
+    background-color: fallback-rgba($background-color, 0.05, $theme-background-color);
     border-color: $calculated-border-color;
 
     &.hover,
     &:hover {
-      background-color: fallback-rgba($background-color, .1, $theme-background-color);
+      background-color: fallback-rgba($background-color, 0.1, $theme-background-color);
       border-color: hsv-darken($calculated-border-color, 7%, true);
     }
 
     &.focus,
     &:focus {
       background-color: $color-bright;
-      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten($calculated-border-color, 20%);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px lighten($calculated-border-color, 20%);
     }
 
     &.active,
     &:active {
-      background-color: fallback-rgba($background-color, .15, $theme-background-color);
+      background-color: fallback-rgba($background-color, 0.15, $theme-background-color);
       border-color: hsv-darken($calculated-border-color, 15%, true);
     }
   }
 }
 
 @mixin placeholder($color) {
-  &::-webkit-input-placeholder { color: $color; } // Safari, Chrome, Opera 15+
-  &:-moz-placeholder { color: $color; } // FF 4-18
-  &::-moz-placeholder { color: $color; } // FF 19+
-  &:-ms-input-placeholder { color: $color; } // IE10+
+  &::-webkit-input-placeholder {
+    color: $color;
+  } // Safari, Chrome, Opera 15+
+  &:-moz-placeholder {
+    color: $color;
+  } // FF 4-18
+  &::-moz-placeholder {
+    color: $color;
+  } // FF 19+
+  &:-ms-input-placeholder {
+    color: $color;
+  } // IE10+
 }
 
-@mixin transition($transition, $type: '') {
+@mixin transition($transition, $type: "") {
   -webkit-transition#{$type}: $transition;
   -moz-transition#{$type}: $transition;
   -ms-transition#{$type}: $transition;
@@ -295,9 +305,8 @@
 }
 
 @mixin notification-variant($background-color, $border-color, $font-color: false) {
-
   $calculated-border-color: hsv-darken($border-color, 15%, true);
-  $calculated-bgr-color: fallback-rgba($background-color, .05, $background-color-regular);
+  $calculated-bgr-color: fallback-rgba($background-color, 0.05, $background-color-regular);
 
   background-color: $calculated-bgr-color;
   // background-color: rgba($background-color, .05); since alpha is to low
@@ -325,7 +334,6 @@
       color: hsv-darken($font-color, 15%, true); // -15%
     }
   }
-
 }
 
 @mixin ellipsis() {
@@ -366,31 +374,52 @@
 }
 
 @mixin form-control-focus($bgr-color, $color: $input-border-color-focus) {
-  $color-rgba: rgba(red($color), green($color), blue($color), .6);
+  $color-rgba: rgba(red($color), green($color), blue($color), 0.6);
 
   &.focus,
   &:focus {
     background-color: $bgr-color;
     border-color: $color;
     outline: 0;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px $color-rgba;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $color-rgba;
   }
 }
 
 @mixin color-variant($name, $color, $saturation: false) {
-
-  .bg-#{$name} { background-color: $color; }
-
-  @if ($saturation) {
-    .bg-#{$name}-25 { background-color: fallback-rgba($color, .25, $background-color-regular); }
-    .bg-#{$name}-50 { background-color: fallback-rgba($color, .5, $background-color-regular); }
-    .bg-#{$name}-75 { background-color: fallback-rgba($color, .75, $background-color-regular); }
+  .bg-#{$name} {
+    background-color: $color;
   }
 
+  @if ($saturation) {
+    .bg-#{$name}-25 {
+      background-color: fallback-rgba($color, 0.25, $background-color-regular);
+    }
+    .bg-#{$name}-50 {
+      background-color: fallback-rgba($color, 0.5, $background-color-regular);
+    }
+    .bg-#{$name}-75 {
+      background-color: fallback-rgba($color, 0.75, $background-color-regular);
+    }
+  }
 }
 
 @mixin panel-layout-two-column-variant($width1, $width2) {
+}
 
-  
+@mixin row-preguntas-frecuentes($backcolor, $textcolor) {
+  background: $backcolor;
+  padding: 10px;
+  color: #fff;
+  position: relative;
+  /* width: 200px; */
+  text-align: left;
+  line-height: 40px;
 
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+  .views-field-title a {
+    color: $textcolor;
+    text-decoration: none;
+  }
 }

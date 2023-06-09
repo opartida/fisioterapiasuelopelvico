@@ -1,224 +1,342 @@
 /* All Responsive
 ================================================== */
-	a#navigation-toggle { height: 55px; line-height: 55px; float: none; margin: 0; cursor: pointer; color: #000; padding-left: 35px; font-weight: 600; position: relative; z-index: 9; text-decoration: none !important; display: none; }
-	a#navigation-toggle .fa { margin-right: 10px; }
-	#navigation-toggle { color: #fff; }
-	#navigation-toggle:hover { color: #fff; }
-	#sidr-main { position: absolute; position: fixed; top: 0; height: 100%; z-index: 999999; width: 320px; overflow-x: none; overflow-y: auto;font-size: 13px; background: #000; color: #fff; }
-	#sidr-main { padding: 50px 30px 30px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
-	.sidr.right { left: auto; right: -320px; }
-	.sidr.left { left: -320px; right: auto; }
-	#sidr-main a { color: #707070; }
-	#sidr-main a:hover { color: #fff; }
-	#sidr-main ul a { display: block; border-bottom: 1px solid #222; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 8px 0; }
-	#sidr-main ul li ul { margin-left: 0; margin: 0; }
-	#sidr-main ul li ul li a { padding-left: 10px; }
-	#sidr-main ul li ul li li a { padding-left: 20px; }
-	#sidr-main ul li ul li li li a { padding-left: 30px; }
-	#sidr-main ul li ul li a:before { content: '\f0da'; display: inline-block; -webkit-font-smoothing: antialiased; font-family: 'FontAwesome'; color: #333; margin-right: 10px; }
-	.sidr-class-toggle-sidr-close:before { font-size: 16px; position: absolute; top: 15px; left: 30px; content: '\f00d'; font-family: 'FontAwesome'; color: #fff; margin: 0; }
-	.slick-next {
-		right:56px;
-	}
-	.slick-prev {
-		left:56px;
-	}
-	
-	@media only screen and (min-width: 769px) 
-	 { 
-	  
-	}
-@media only screen and (max-width: 959px) {
-
-	a#navigation-toggle { display: block; }
-	#site-navigation #main-menu > ul { display: none; }
-
-	
-	
+a#navigation-toggle {
+	height: 55px;
+	line-height: 55px;
+	float: none;
+	margin: 0;
+	cursor: pointer;
+	color: #000;
+	padding-left: 35px;
+	font-weight: 600;
+	position: relative;
+	z-index: 9;
+	text-decoration: none !important;
+	display: none;
+}
+a#navigation-toggle .fa {
+	margin-right: 10px;
+}
+#navigation-toggle {
+	color: #fff;
+}
+#navigation-toggle:hover {
+	color: #fff;
+}
+#sidr-main {
+	position: absolute;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 999999;
+	width: 320px;
+	overflow-x: none;
+	overflow-y: auto;
+	font-size: 13px;
+	background: #000;
+	color: #fff;
+}
+#sidr-main {
+	padding: 50px 30px 30px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.sidr.right {
+	left: auto;
+	right: -320px;
+}
+.sidr.left {
+	left: -320px;
+	right: auto;
+}
+#sidr-main a {
+	color: #707070;
+}
+#sidr-main a:hover {
+	color: #fff;
+}
+#sidr-main ul a {
+	display: block;
+	border-bottom: 1px solid #222;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	padding: 8px 0;
+}
+#sidr-main ul li ul {
+	margin-left: 0;
+	margin: 0;
+}
+#sidr-main ul li ul li a {
+	padding-left: 10px;
+}
+#sidr-main ul li ul li li a {
+	padding-left: 20px;
+}
+#sidr-main ul li ul li li li a {
+	padding-left: 30px;
+}
+#sidr-main ul li ul li a:before {
+	content: "\f0da";
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font-family: "FontAwesome";
+	color: #333;
+	margin-right: 10px;
+}
+.sidr-class-toggle-sidr-close:before {
+	font-size: 16px;
+	position: absolute;
+	top: 15px;
+	left: 30px;
+	content: "\f00d";
+	font-family: "FontAwesome";
+	color: #fff;
+	margin: 0;
+}
+.slick-next {
+	right: 56px;
+}
+.slick-prev {
+	left: 56px;
 }
 
-
+@media only screen and (min-width: 769px) {
+}
+@media only screen and (max-width: 959px) {
+	a#navigation-toggle {
+		display: block;
+	}
+	#site-navigation #main-menu > ul {
+		display: none;
+	}
+}
 
 /* Tablet (Portrait)
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-	.container { max-width: 85%; }
-	.left-content { width: 60%; }
-	.sidebar-container { width: 36%; }
+	.container {
+		max-width: 85%;
+	}
+	.left-content {
+		width: 60%;
+	}
+	.sidebar-container {
+		width: 36%;
+	}
 	#block-panels-mini-presentacion {
 		padding: 0px;
-	}	
+	}
 }
 
 /* Tablet (Portrait)
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-	.container { max-width: 85%; }
-	.left-content { width: 60%; }
-	.sidebar-container { width: 36%; }	
-
-	
-	.block-views-slideshow-block{
-		display:none;
+	.container {
+		max-width: 85%;
 	}
-	
-}
+	.left-content {
+		width: 60%;
+	}
+	.sidebar-container {
+		width: 36%;
+	}
 
+	.block-views-slideshow-block {
+		display: none;
+	}
+}
 
 /* Mobile (Portrait & Landscape)
 ================================================== */
 @media only screen and (max-width: 767px) {
 	.home-section-panel .panels-flexible-region .ams-content {
-     padding: 0px;
-	 
+		padding: 0px;
 	}
 	.home-section-panel .panels-flexible-region .ams-content p {
-     
-	 font-size:16px;
+		font-size: 16px;
 	}
-	
-	.home-section-panel  .ams-header {
-     
-	 font-size:24px;
+
+	.home-section-panel .ams-header {
+		font-size: 24px;
 	}
 	.home-section-panel img {
-     
-	 margin:10px 0px;
+		margin: 10px 0px;
 	}
-	.container { max-width: 100%; width: 100%; }
+	.container {
+		max-width: 100%;
+		width: 100%;
+	}
 	.sidebar-container,
-	.left-content { width: 100% }
-	.sidebar-container {border-top: 10px solid #eee; }
-	.col{ width: 100%; margin-left: 0; margin-bottom: 25px; }
-	#wrap { margin-top: 0; margin-bottom: 0; }
-	#header-social { clear: both; position: inherit; top: auto; right: auto; margin-top: 20px; }
-	#mini-panel-spotlight {display:none}
-	
-	div.resumenTexto.left{
-		float: none; margin-left: 0; margin-right: 0px; text-align: left; 
+	.left-content {
+		width: 100%;
+	}
+	.sidebar-container {
+		border-top: 10px solid #eee;
+	}
+	.col {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 25px;
+	}
+	#wrap {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	#header-social {
+		clear: both;
+		position: inherit;
+		top: auto;
+		right: auto;
+		margin-top: 20px;
+	}
+	#mini-panel-spotlight {
+		display: none;
+	}
+
+	div.resumenTexto.left {
+		float: none;
+		margin-left: 0;
+		margin-right: 0px;
+		text-align: left;
 	}
 	#mini-panel-unidad_suelo_pelvico .textBox.column1 {
-		padding:0px;
+		padding: 0px;
 	}
 
-	div.resumenTexto.right{
-		float: none; margin-left: 0px; margin-right: 0; text-align: left;
+	div.resumenTexto.right {
+		float: none;
+		margin-left: 0px;
+		margin-right: 0;
+		text-align: left;
 	}
 
-#secondary {
-	padding-top:0px;
-}
-.container {
-		padding:0 10px!important;
+	#secondary {
+		padding-top: 0px;
 	}
-	.container img{
-		padding:0px;
+	.container {
+		padding: 0 10px !important;
+	}
+	.container img {
+		padding: 0px;
 	}
 
-#contacto{
-	display:none;	
-}
-
-.quienes-somos-box {
-	flex-wrap: wrap;
-}
-
-.quienes-somos-box .content {
-	padding:0px 10px;		
-}
-.quienes-somos-box .imgBox {margin: auto;}
-	
-#mini-panel-cita_online {display:none;}
-#img-unidad-suelo-pelvico {display:none;}
-#img-hospital-san-rafael {display:none;}
-
-#block-panels-mini-presentacion #mini-panel-presentacion > .panel-panel > div .imgBox{
-	width:50%;
-	margin:auto;
-	
-}
-
-#block-panels-mini-presentacion #mini-panel-presentacion > .panel-panel > div .contentBox{
-	width:100%;
-	padding: 0px 10px;
-}
-
-#block-panels-mini-presentacion-nuevo,#block-panels-mini-publicidad-curso,#block-panels-mini-unidad-suelo-pelvico {
-	padding:0px;
-}
-
-
-#block-panels-mini-unidad-suelo-pelvico   div .contentBox .textBox {
-	padding-right:0px;
-}
-.contact_info_wrap {
-display:none;	
-}
-
-#mini-panel-presentacion_nuevo .contentBox  .imgBox,
-#mini-panel-unidad_suelo_pelvico .contentBox  .imgBox {
-	
-	padding-top:0px;
-
+	#contacto {
+		display: none;
 	}
-#mini-panel-presentacion_nuevo {
-padding-top:10px;	
-}
-.quienes-somos-presentacion--wrapper {
-	padding:0;
-}
- #mini-panel-cursos_home {
-    padding: 30px 0px!important;
-}
 
- #mini-panel-cursos_home .views-row {
-    margin-bottom:10px;
-}
-	
+	.quienes-somos-box {
+		flex-wrap: wrap;
+	}
+
+	.quienes-somos-box .content {
+		padding: 0px 10px;
+	}
+	.quienes-somos-box .imgBox {
+		margin: auto;
+	}
+
+	#mini-panel-cita_online {
+		display: none;
+	}
+	#img-unidad-suelo-pelvico {
+		display: none;
+	}
+	#img-hospital-san-rafael {
+		display: none;
+	}
+
+	#block-panels-mini-presentacion #mini-panel-presentacion > .panel-panel > div .imgBox {
+		width: 50%;
+		margin: auto;
+	}
+
+	#block-panels-mini-presentacion #mini-panel-presentacion > .panel-panel > div .contentBox {
+		width: 100%;
+		padding: 0px 10px;
+	}
+
+	#block-panels-mini-presentacion-nuevo,
+	#block-panels-mini-publicidad-curso,
+	#block-panels-mini-unidad-suelo-pelvico {
+		padding: 0px;
+	}
+
+	#block-panels-mini-unidad-suelo-pelvico div .contentBox .textBox {
+		padding-right: 0px;
+	}
+	.contact_info_wrap {
+		display: none;
+	}
+
+	#mini-panel-presentacion_nuevo .contentBox .imgBox,
+	#mini-panel-unidad_suelo_pelvico .contentBox .imgBox {
+		padding-top: 0px;
+	}
+	#mini-panel-presentacion_nuevo {
+		padding-top: 10px;
+	}
+	.quienes-somos-presentacion--wrapper {
+		padding: 0;
+	}
+	#mini-panel-cursos_home {
+		padding: 30px 0px !important;
+	}
+
+	#mini-panel-cursos_home .views-row {
+		margin-bottom: 10px;
+	}
 }
 /* Mobile (Landscape)
 ================================================== */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	.sidr { width: 480px; }
-	.sidr.right { right: -480px; }
-	
-	#block-views-slideshow-block{display:none;}	
-	#mini-panel-spotlight {display:none}
-	#mini-panel-cita_online {display:none;}
-	#img-unidad-suelo-pelvico {display:none;}
-	#img-hospital-san-rafael {display:none;}	
+	.sidr {
+		width: 480px;
+	}
+	.sidr.right {
+		right: -480px;
+	}
+
+	#block-views-slideshow-block {
+		display: none;
+	}
+	#mini-panel-spotlight {
+		display: none;
+	}
+	#mini-panel-cita_online {
+		display: none;
+	}
+	#img-unidad-suelo-pelvico {
+		display: none;
+	}
+	#img-hospital-san-rafael {
+		display: none;
+	}
 }
 
 /* Mobile ()
 ================================================== */
-@media only screen and  (max-width: 480px) {
-	
-	/* HOME panels */ 
+@media only screen and (max-width: 480px) {
+	/* HOME panels */
 	.panel-quienes-somos {
-		
 	}
-	#footer-block-wrap .footer-block{
+	#footer-block-wrap .footer-block {
+		justify-content: left;
+	}
 
-		
-	justify-content:left;
-	}
-	
 	.container {
-		padding:0 10px!important;
+		padding: 0 10px !important;
 	}
-	
+
 	.slick-next {
-		right:0px;
+		right: 0px;
 	}
 	.slick-prev {
-		left:0px;
+		left: 0px;
 	}
-	
-	
-	
+
 	.view-cursos .curso-wrap > div.curso-details-wrap {
-    flex: 0 0 100%;
-	padding:0 10px;
+		flex: 0 0 100%;
+		padding: 0 10px;
 	}
 	#block-panels-mini-presentacion #mini-panel-presentacion > .panel-panel > div {
 		display: -webkit-flex;
@@ -226,18 +344,18 @@ padding-top:10px;
 		-webkit-flex-flow: row wrap;
 		flex-flow: row wrap;
 	}
-	#block-panels-mini-presentacion #mini-panel-presentacion > .panel-panel > div .imgBox{
-		width:50%;
-		margin:auto;		
+	#block-panels-mini-presentacion #mini-panel-presentacion > .panel-panel > div .imgBox {
+		width: 50%;
+		margin: auto;
 	}
 
-	#block-panels-mini-presentacion #mini-panel-presentacion > .panel-panel > div .contentBox{
-		width:100%;
+	#block-panels-mini-presentacion #mini-panel-presentacion > .panel-panel > div .contentBox {
+		width: 100%;
 		padding: 0px 10px;
 	}
 	#block-panels-mini-presentacion {
 		padding: 0px 10px 10px 10px;
-		background-color: #F4F4F4;
+		background-color: #f4f4f4;
 	}
 	#block-panels-mini-presentacion .content {
 		box-shadow: none;
@@ -250,13 +368,10 @@ padding-top:10px;
 		padding: 0px;
 	}
 	#mini-panel-presentacion_nuevo .contentBox .textBox.column1,
-	#mini-panel-presentacion_nuevo .contentBox .textBox.column2	{
-		padding:0px;
+	#mini-panel-presentacion_nuevo .contentBox .textBox.column2 {
+		padding: 0px;
 	}
-	#mini-panel-presentacion_nuevo .contentBox  .first-row .textBox p:last-child	{
-		margin-bottom:0px;
+	#mini-panel-presentacion_nuevo .contentBox .first-row .textBox p:last-child {
+		margin-bottom: 0px;
 	}
-	
-	
 }
-
