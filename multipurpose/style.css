@@ -287,7 +287,7 @@ font-weight:normal!important;
 #site-navigation-wrap { /*background-color: #e0e0e0;*/text-align:center;  }
 #site-navigation #main-menu > ul li { display: block; float: left; height: 55px; line-height: 55px; }
 
-#site-navigation #main-menu > ul a { color: #ff8000;  text-decoration: none; text-align: left; cursor: pointer; padding: 0 10px}
+#site-navigation #main-menu > ul a { color: #ff8000;  text-decoration: none; text-align: left; cursor: pointer; padding: 0 8px}
 #site-navigation #main-menu > ul > li > a:hover,
 #site-navigation #main-menu > ul > li.sfHover > a,
 #site-navigation #main-menu > ul > li > a.active,
