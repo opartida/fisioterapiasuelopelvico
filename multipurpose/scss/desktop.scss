@@ -548,9 +548,7 @@
 		padding: 1px;
 		border-radius: 5px;
 		background-color: #ff8000;
-		&:not(:first-child) {
-			margin-top: 60px;
-		}
+		margin-top: 60px;
 		.views-field-title a {
 			font-size: 20px;
 			text-decoration: none;
