@@ -110,7 +110,7 @@ a#navigation-toggle .fa {
 	font-size: 18px;
 	display: inline-block;
 
-	border: 1px solid #ff8000;
+	border: 1px solid $color-brand;
 	background-color: #fff;
 	text-decoration: none;
 }
@@ -118,12 +118,12 @@ a#navigation-toggle .fa {
 .curso-wrap .curso-details-wrap div.btnDefault:hover {
 	cursor: pointer;
 	color: #fff !important;
-	background-color: #ff8000;
+	background-color: $color-brand;
 	text-decoration: none;
 }
 
 .curso-wrap .curso-details-wrap div.btnDefault a {
-	color: #ff8000 !important;
+	color: $color-brand !important;
 }
 
 .curso-wrap .curso-details-wrap div.btnDefault a:hover {
@@ -137,18 +137,18 @@ a#navigation-toggle .fa {
 	display: none;
 }
 .page-home .ams-front-panel h2 {
-	background-color: #ff8000;
+	background-color: $color-brand;
 	color: #fff;
 }
 
 .ams-div-full-width {
 	width: 100%;
 }
-.ams-background-color-primary {
-	background-color: #ff8000;
+.ams-fontcolor-brand {
+	color: $font-color-brand;
 }
-
-.ams-background-color-01 {
+.ams-background-color-primary {
+	background-color: $color-brand;
 }
 
 .ams-background-color-02 {
@@ -170,7 +170,7 @@ a#navigation-toggle .fa {
 }
 
 .ams-button-div {
-	border: 1px solid #ff8000;
+	border: 1px solid $color-brand;
 	font-size: 14px;
 	line-height: 1;
 	letter-spacing: 0.2px;
@@ -181,12 +181,12 @@ a#navigation-toggle .fa {
 }
 
 .ams-button-div a {
-	color: #ff8000;
+	color: $color-brand;
 	text-decoration: none;
 }
 
 .ams-button-div:hover {
-	background-color: #ff8000;
+	background-color: $color-brand;
 }
 
 .ams-button-div:hover a {
@@ -284,7 +284,7 @@ a#navigation-toggle .fa {
 }
 
 .ams-text-primary {
-	color: #ff8000;
+	color: $color-brand;
 }
 
 .ams-text-primary-dark {
@@ -1124,7 +1124,7 @@ a#navigation-toggle .fa {
 }
 
 #mini-panel-home_section_quienes_somos_new .pane-content .content {
-	color: #ff8000;
+	color: $color-brand;
 }
 #mini-panel-home_section_origen_unidad_new {
 	background-color: #fff;
@@ -1141,7 +1141,7 @@ a#navigation-toggle .fa {
 	}
 
 	& .pane-content p a {
-		color: #ff8000;
+		color: $color-brand;
 		text-decoration: underline;
 	}
 	& .column1 p:last-child,
@@ -1152,7 +1152,7 @@ a#navigation-toggle .fa {
 	& h2 {
 		text-align: center;
 		font-size: 25px;
-		color: #ff8000;
+		color: $color-brand;
 	}
 }
 %panel-two-column-basis {
